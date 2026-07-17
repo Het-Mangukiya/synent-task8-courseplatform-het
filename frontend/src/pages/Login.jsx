@@ -46,7 +46,10 @@ export default function Login() {
       toast.success(`Welcome back, ${data.user.name}`);
       navigate('/dashboard');
     } catch (err) {
-      setError(err.response?.data?.message || 'Login failed. Please check your credentials.');
+      setError(
+        err.response?.data?.message ||
+        'Could not reach the Craftline API. Make sure the backend is running on port 5001.'
+      );
     } finally {
       setLoading(false);
     }
