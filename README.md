@@ -1,6 +1,6 @@
-# LearnSphere — Online Course Platform
+# Craftline — Online Course Platform
 
-A full-stack online course platform built with the **MERN stack** (MongoDB, Express, React, Node.js), featuring JWT auth, Razorpay test payments, and a Silver Chrome Minimal UI.
+A full-stack online course platform built with the **MERN stack** (MongoDB, Express, React, Node.js), featuring JWT auth, Razorpay test payments, and a Craftline warm minimal UI.
 
 ## 🚀 Tech Stack
 
@@ -11,7 +11,7 @@ A full-stack online course platform built with the **MERN stack** (MongoDB, Expr
 | Database | MongoDB + Mongoose |
 | Auth | JWT (7-day expiry) + bcryptjs |
 | Payments | Razorpay Test Mode |
-| Styling | Vanilla CSS — Silver Chrome Minimal |
+| Styling | Vanilla CSS — Craftline Warm Minimal |
 
 ## 📁 Project Structure
 

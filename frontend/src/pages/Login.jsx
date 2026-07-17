@@ -63,7 +63,7 @@ export default function Login() {
               <path d="M8 12l8-4 8 4v8l-8 4-8-4V12z" stroke="white" strokeWidth="1.5" fill="none"/>
               <path d="M16 8v16M8 12l8 4 8-4" stroke="white" strokeWidth="1.5"/>
             </svg>
-            <span>LearnSphere</span>
+            <span>Craftline</span>
           </div>
           <h2 className="auth-brand-headline">
             Master skills that move your career forward.

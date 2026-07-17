@@ -43,7 +43,7 @@ export default function Register() {
     try {
       const { data } = await api.post('/api/auth/register', form);
       login(data.token, data.user);
-      toast.success(`Welcome to LearnSphere, ${data.user.name}!`);
+      toast.success(`Welcome to Craftline, ${data.user.name}!`);
       toast.info(`Verification email sent to ${form.email}`, { autoClose: 5000 });
       navigate('/verify-email');
     } catch (err) {
@@ -64,7 +64,7 @@ export default function Register() {
               <path d="M8 12l8-4 8 4v8l-8 4-8-4V12z" stroke="white" strokeWidth="1.5" fill="none"/>
               <path d="M16 8v16M8 12l8 4 8-4" stroke="white" strokeWidth="1.5"/>
             </svg>
-            <span>LearnSphere</span>
+            <span>Craftline</span>
           </div>
           <h2 className="auth-brand-headline">
             Start your learning journey today.

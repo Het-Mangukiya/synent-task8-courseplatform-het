@@ -3,7 +3,7 @@ export default function ProgressBar({ percent = 0 }) {
   const color =
     safePercent === 100 ? 'var(--success)' :
     safePercent >= 50  ? 'var(--accent)'  :
-    '#2d6a8a';
+    '#2F6F4E';
 
   return (
     <div className="progress-bar-wrap" role="progressbar" aria-valuenow={safePercent} aria-valuemin={0} aria-valuemax={100}>

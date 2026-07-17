@@ -43,7 +43,7 @@ export default function ResetPassword() {
   return (
     <div className="auth-page">
       <div className="auth-card fade-in">
-        <div className="auth-logo">LearnSphere</div>
+        <div className="auth-logo">Craftline</div>
 
         {!success ? (
           <>

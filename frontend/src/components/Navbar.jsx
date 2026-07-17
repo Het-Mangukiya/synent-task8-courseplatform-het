@@ -20,7 +20,7 @@ export default function Navbar() {
       <div className="navbar-inner">
         {/* Logo */}
         <Link to="/" className="navbar-logo">
-          Learn<span>Sphere</span>
+          Craft<span>line</span>
         </Link>
 
         {/* Nav Links */}

@@ -68,7 +68,7 @@ export default function EmailVerification() {
   return (
     <div className="auth-page">
       <div className="auth-card fade-in" style={{ textAlign: 'center' }}>
-        <div className="auth-logo">LearnSphere</div>
+        <div className="auth-logo">Craftline</div>
 
         {verifying && (
           <>
@@ -90,7 +90,7 @@ export default function EmailVerification() {
             </div>
             <h2 style={{ marginBottom: 10 }}>Email verified!</h2>
             <p className="text-muted" style={{ marginBottom: 24, fontSize: '0.9rem' }}>
-              Your email has been successfully verified. You now have full access to LearnSphere.
+              Your email has been successfully verified. You now have full access to Craftline.
             </p>
             <div className="alert alert-success" style={{ justifyContent: 'center' }}>
               Account verified successfully

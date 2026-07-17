@@ -103,7 +103,7 @@ export default function CourseDetail() {
         key: orderData.keyId,
         amount: orderData.amount,
         currency: orderData.currency,
-        name: 'LearnSphere',
+        name: 'Craftline',
         description: orderData.courseName,
         order_id: orderData.orderId,
         handler: async (response) => {
@@ -126,7 +126,7 @@ export default function CourseDetail() {
           name: user?.name || '',
           email: user?.email || '',
         },
-        theme: { color: '#1D2B4F' },
+        theme: { color: '#7A4213' },
         modal: { ondismiss: () => setEnrolling(false) },
       };
 
