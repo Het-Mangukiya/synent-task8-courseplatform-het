@@ -8,10 +8,16 @@ const Course = require('../models/Course');
 const Payment = require('../models/Payment');
 const { sendEnrollmentEmail } = require('../utils/email');
 
-const razorpay = new Razorpay({
-  key_id: process.env.RAZORPAY_KEY_ID,
-  key_secret: process.env.RAZORPAY_KEY_SECRET,
-});
+const getRazorpayClient = () => {
+  if (!process.env.RAZORPAY_KEY_ID || !process.env.RAZORPAY_KEY_SECRET) {
+    return null;
+  }
+
+  return new Razorpay({
+    key_id: process.env.RAZORPAY_KEY_ID,
+    key_secret: process.env.RAZORPAY_KEY_SECRET,
+  });
+};
 
 // POST /api/payment/create-order
 router.post('/create-order', protect, async (req, res) => {
@@ -26,7 +32,8 @@ router.post('/create-order', protect, async (req, res) => {
       return res.status(400).json({ message: 'Already enrolled in this course' });
     }
 
-    if (process.env.RAZORPAY_KEY_ID === 'rzp_test_xxxxxxxxxxxxxxxxxx') {
+    const razorpay = getRazorpayClient();
+    if (!razorpay || process.env.RAZORPAY_KEY_ID === 'rzp_test_xxxxxxxxxxxxxxxxxx') {
       return res.status(400).json({ 
         message: 'Missing Razorpay Keys! Please add your real RAZORPAY_KEY_ID and RAZORPAY_KEY_SECRET to the backend/.env file.' 
       });
@@ -57,6 +64,10 @@ router.post('/create-order', protect, async (req, res) => {
 router.post('/verify', protect, async (req, res) => {
   try {
     const { razorpay_order_id, razorpay_payment_id, razorpay_signature, courseId } = req.body;
+    const razorpay = getRazorpayClient();
+    if (!razorpay) {
+      return res.status(400).json({ message: 'Missing Razorpay keys. Payment verification is unavailable.' });
+    }
 
     const sign = razorpay_order_id + '|' + razorpay_payment_id;
     const expectedSign = crypto

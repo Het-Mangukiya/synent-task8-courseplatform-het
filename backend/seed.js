@@ -204,6 +204,7 @@ async function seed() {
       email: 'admin@courseplatform.com',
       password: adminPassword,
       role: 'admin',
+      isVerified: true,
     });
     console.log(`👤 Admin created: ${admin.email} / password: admin123`);
 
@@ -214,6 +215,7 @@ async function seed() {
       email: 'student@courseplatform.com',
       password: studentPassword,
       role: 'user',
+      isVerified: true,
       enrolledCourses: [createdCourses[0]._id],
     });
     console.log(`👤 Student created: ${student.email} / password: student123`);
