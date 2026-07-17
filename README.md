@@ -1,4 +1,4 @@
-# LearnSphere — Online Course Platform
+# Craftline — Online Course Platform
 
 A full-stack online course platform built with the **MERN stack** (MongoDB, Express, React, Node.js), featuring JWT auth, Razorpay test payments, and a Silver Chrome Minimal UI.
 
